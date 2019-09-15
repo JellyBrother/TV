@@ -18,7 +18,7 @@ import com.bumptech.glide.request.target.SimpleTarget;
 import com.bumptech.glide.request.target.ViewTarget;
 import com.bumptech.glide.request.transition.Transition;
 
-public class IHRImageLoader {
+public class ImageLoader {
     private RequestManager requestManager;
     private final RequestOptions defaultRequestOptions;
     private RequestBuilder<Drawable> request;
@@ -27,39 +27,39 @@ public class IHRImageLoader {
      * 这种单例模式既实现了线程安全，又避免了同步带来的性能问题
      */
     private static class LazyHolder {
-        private static final IHRImageLoader INSTANCE = new IHRImageLoader();
+        private static final ImageLoader INSTANCE = new ImageLoader();
     }
 
-    public IHRImageLoader() {
+    public ImageLoader() {
         defaultRequestOptions = new RequestOptions();
     }
 
-    public static final IHRImageLoader getInstance() {
+    public static final ImageLoader getInstance() {
         return LazyHolder.INSTANCE;
     }
 
-    public IHRImageLoader with(Context context) {
+    public ImageLoader with(Context context) {
         requestManager = Glide.with(context);
         return this;
     }
 
-    public IHRImageLoader with(Activity activity) {
+    public ImageLoader with(Activity activity) {
         requestManager = Glide.with(activity);
         return this;
     }
 
-    public IHRImageLoader with(Fragment fragment) {
+    public ImageLoader with(Fragment fragment) {
         requestManager = Glide.with(fragment);
         return this;
     }
 
-    public IHRImageLoader with(View view) {
+    public ImageLoader with(View view) {
         requestManager = Glide.with(view);
         return this;
     }
 
     //加载图片的地址
-    public IHRImageLoader load(Object object) {
+    public ImageLoader load(Object object) {
         if (object instanceof String) {
 
         }
@@ -69,28 +69,28 @@ public class IHRImageLoader {
     }
 
     //占位图
-    public IHRImageLoader setPlaceholderDrawable(Drawable drawable) {
+    public ImageLoader setPlaceholderDrawable(Drawable drawable) {
         RequestOptions options = new RequestOptions().placeholder(drawable);
         request = request.apply(options);
         return this;
     }
 
     //请求失败图
-    public IHRImageLoader setFallbackDrawable(Drawable drawable) {
+    public ImageLoader setFallbackDrawable(Drawable drawable) {
         RequestOptions options = new RequestOptions().fallback(drawable);
         request = request.apply(options);
         return this;
     }
 
     //错误图
-    public IHRImageLoader setErrorDrawable(Drawable drawable) {
+    public ImageLoader setErrorDrawable(Drawable drawable) {
         RequestOptions options = new RequestOptions().error(drawable);
         request = request.apply(options);
         return this;
     }
 
     //没有磁盘缓存
-    public IHRImageLoader setNoDiskCache() {
+    public ImageLoader setNoDiskCache() {
         RequestOptions options = new RequestOptions().diskCacheStrategy(DiskCacheStrategy.NONE);
         request = request.apply(options);
         return this;
@@ -103,16 +103,16 @@ public class IHRImageLoader {
     }
 
     //开始加载图片
-    public IHRSimpleTarget into(IHRSimpleTarget ihrSimpleTarget) {
-        return request.into(ihrSimpleTarget);
+    public SimpleTarget into(SimpleTarget simpleTarget) {
+        return request.into(simpleTarget);
     }
 
     //开始加载图片
-    public IHRViewTarget into(IHRViewTarget ihrViewTarget) {
-        return request.into(ihrViewTarget);
+    public ViewTarget into(ViewTarget viewTarget) {
+        return request.into(viewTarget);
     }
 
-    public class IHRSimpleTarget extends SimpleTarget {
+    public class SimpleTarget extends SimpleTarget {
 
         @Override
         public void onResourceReady(Object o, Transition transition) {
@@ -120,7 +120,7 @@ public class IHRImageLoader {
         }
     }
 
-    public class IHRSimpleTarget2<Bitmap> extends SimpleTarget<Bitmap> {
+    public class SimpleTarget2<Bitmap> extends SimpleTarget<Bitmap> {
 
         @Override
         public void onResourceReady(Bitmap bitmap, Transition<? super Bitmap> transition) {
@@ -128,9 +128,9 @@ public class IHRImageLoader {
         }
     }
 
-    public class IHRViewTarget extends ViewTarget {
+    public class ViewTarget extends ViewTarget {
 
-        public IHRViewTarget(View view) {
+        public ViewTarget(View view) {
             super(view);
         }
 
@@ -140,9 +140,9 @@ public class IHRImageLoader {
         }
     }
 
-    public class IHRViewTarget2 extends ViewTarget<ImageView, Bitmap> {
+    public class ViewTarget2 extends ViewTarget<ImageView, Bitmap> {
 
-        public IHRViewTarget2(ImageView view) {
+        public ViewTarget2(ImageView view) {
             super(view);
         }
 
@@ -162,7 +162,7 @@ public class IHRImageLoader {
         }
     }
 
-    public interface IHRViewTargetInterface {
+    public interface ViewTargetInterface {
         public void onLoadStarted(@Nullable Drawable placeholder);
 
         public void onResourceReady(Bitmap bitmap, Transition<? super Bitmap> transition);

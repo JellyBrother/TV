@@ -8,9 +8,9 @@ import com.jelly.tv.base.interfaces.IApplication;
 import com.jelly.tv.base.log.AppCrashHandler;
 import com.jelly.tv.base.log.LogTools;
 import com.jelly.tv.base.log.ThreadTask;
-import com.huawei.hrandroidbase.db.DbAdapterFactory;
-import com.huawei.hrandroidbase.db.control.DbManagerImpl;
-import com.huawei.hrandroidbase.db.util.LogUtil;
+import com.db.DbAdapterFactory;
+import com.db.control.DbManagerImpl;
+import com.db.util.LogUtil;
 
 import java.util.LinkedList;
 import java.util.List;

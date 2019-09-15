@@ -17,22 +17,22 @@ import java.io.File;
  *         2.	适用范围
  *         适用于公司采用Android编程语言开发的所有软件项目。
  *         3.	若没有SDCrad的情况下
- *         若没有SDCrad存在的情况下，项目中需要的本地文件保存目录为/data/data/com.huawei.xx(包名)/cache/
- *         /data/data/com.huawei.xx(包名)/cache/hw_log   日志文件保存目录
- *         /data/data/com.huawei.xx(包名)/cache/hw_apk  相关APK文件保存目录
- *         /data/data/com.huawei.xx(包名)/cache/hw_cache 缓存文件保存目录
- *         /data/data/com.huawei.xx(包名)/cache/hw_pic   图片文件保存目录
- *         /data/data/com.huawei.xx(包名)/cache/hw_video  视频文件保存目录
- *         /data/data/com.huawei.xx(包名)/cache/hw_music  音频文件保存目录
- *         /data/data/com.huawei.xx(包名)/cache/hw_temp  临时文件保存目录
- *         /data/data/com.huawei.xx(包名)/cache/hw_download  下载文件保存目录
- *         /data/data/com.huawei.xx(包名)/cache/hw_http  http请求缓冲目录
- *         /data/data/com.huawei.xx(包名)/cache/hw_update  app自身更新的下载目录
- *         /data/data/com.huawei.xx(包名)/cache/hw_exception  app异常闪退日志目录目录
+ *         若没有SDCrad存在的情况下，项目中需要的本地文件保存目录为/data/data/com..xx(包名)/cache/
+ *         /data/data/com..xx(包名)/cache/hw_log   日志文件保存目录
+ *         /data/data/com..xx(包名)/cache/hw_apk  相关APK文件保存目录
+ *         /data/data/com..xx(包名)/cache/hw_cache 缓存文件保存目录
+ *         /data/data/com..xx(包名)/cache/hw_pic   图片文件保存目录
+ *         /data/data/com..xx(包名)/cache/hw_video  视频文件保存目录
+ *         /data/data/com..xx(包名)/cache/hw_music  音频文件保存目录
+ *         /data/data/com..xx(包名)/cache/hw_temp  临时文件保存目录
+ *         /data/data/com..xx(包名)/cache/hw_download  下载文件保存目录
+ *         /data/data/com..xx(包名)/cache/hw_http  http请求缓冲目录
+ *         /data/data/com..xx(包名)/cache/hw_update  app自身更新的下载目录
+ *         /data/data/com..xx(包名)/cache/hw_exception  app异常闪退日志目录目录
  *         4.	若存在SDCard的情况
  *         若SDCrad存在的情况，项目中需要的本地文件保存目录为
- *         /Huawei/HuaweiIT/iCaptain/        应用APP业务存储目录
- *         /HuaweiSystem/iCaptain/          应用APP日志目录
+ *         //IT/iCaptain/        应用APP业务存储目录
+ *         /System/iCaptain/          应用APP日志目录
  */
 public final class CacheDirectory {
     private CacheDirectory() {
@@ -67,20 +67,20 @@ public final class CacheDirectory {
      *
      * @param context   上下文
      * @param cacheName 缓冲目录名称
-     * @param huaweiIT  是否为应用业务类日志(true对用户可见的目录  false对用户不可见)
+     * @param IT  是否为应用业务类日志(true对用户可见的目录  false对用户不可见)
      * @return 缓冲目录的路径
      */
-    public static String getCacheDir(Context context, String cacheName, boolean huaweiIT) {
+    public static String getCacheDir(Context context, String cacheName, boolean IT) {
         String dir = null;
         boolean flag = false;
         //判断是否有sdkcard,sdcard读写权限
         if (hasExternalStorage() && hasExternalStoragePermission(context)) {
             Log.d(CacheDirectory.class.getSimpleName(), "加载sdcard文件：" + cacheName);
             String cacheDir = "";
-            if (huaweiIT) {
-                cacheDir = "/Huawei/HuaweiIT/iCaptain/" + cacheName;
+            if (IT) {
+                cacheDir = "//IT/iCaptain/" + cacheName;
             } else {
-                cacheDir = "/HuaweiSystem/iCaptain/" + cacheName;
+                cacheDir = "/System/iCaptain/" + cacheName;
             }
             File file = new File(Environment.getExternalStorageDirectory().getPath() + cacheDir);
             flag = true;
