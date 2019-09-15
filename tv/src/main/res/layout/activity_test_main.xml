@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/main_show"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="测试的主界面"
+        android:textSize="20sp" />
+
+    <Button
+        android:id="@+id/btn_china"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/btn_china" />
+
+    <Button
+        android:id="@+id/btn_english"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/btn_english" />
+
+    <Button
+        android:id="@+id/btn_draw_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="画图圆形，并且加文字" />
+
+    <Button
+        android:id="@+id/btn_spinner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="下拉选择" />
+
+    <Button
+        android:id="@+id/btn_gif"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="显示gif图片" />
+
+    <Button
+        android:id="@+id/btn_Marquee"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="跑马灯效果" />
+
+    <Button
+        android:id="@+id/btn_biaoqian"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="标签控件" />
+
+    <Button
+        android:id="@+id/btn_glide"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="glide图片加载" />
+</LinearLayout>

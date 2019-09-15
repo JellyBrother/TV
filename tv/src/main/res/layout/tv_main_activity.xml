@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rl_preview"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black">
+
+    <TextView
+        android:id="@+id/network_erro"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/px90"
+        android:layout_alignParentBottom="true"
+        android:alpha="0.7"
+        android:background="@color/black"
+        android:gravity="center_vertical"
+        android:padding="@dimen/px20"
+        android:textColor="@color/white"
+        android:textSize="@dimen/px36"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/getdata_erro"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/px90"
+        android:layout_alignParentBottom="true"
+        android:alpha="0.7"
+        android:background="@color/black"
+        android:gravity="center_vertical"
+        android:padding="@dimen/px20"
+        android:textColor="@color/white"
+        android:textSize="@dimen/px36"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/tv_noupdate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:background="@drawable/round_black_10"
+        android:gravity="center"
+        android:padding="@dimen/px30"
+        android:textColor="@color/white"
+        android:textSize="@dimen/px36"
+        android:visibility="gone" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ViewFlipper
+            android:id="@+id/vfr_image_left"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2" />
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="5"
+            android:paddingBottom="@dimen/px18"
+            android:paddingLeft="@dimen/px30"
+            android:paddingRight="@dimen/px18"
+            android:paddingTop="@dimen/px18">
+
+            <TextView
+                android:id="@+id/tvw_repair_schedule"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:text="@string/main_repair_schedule" />
+
+            <TextView
+                android:id="@+id/tvw_data"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentTop="true"
+                android:text="2017-07-04 12:26 星期三" />
+
+            <!--<TextView-->
+            <!--android:id="@+id/tvt_change_language"-->
+            <!--android:layout_alignParentTop="true"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:text="@string/login_change_language"-->
+            <!--android:textColor="#666666"-->
+            <!--android:textSize="@dimen/px30" />-->
+
+            <!--<LinearLayout-->
+            <!--android:id="@+id/llt_change_language"-->
+            <!--android:layout_alignParentTop="true"-->
+            <!--android:layout_alignParentRight="true"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="@dimen/px50"-->
+            <!--android:background="#ffffff">-->
+
+            <!--<Spinner-->
+            <!--android:id="@+id/spinner"-->
+            <!--android:overlapAnchor="false"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:backgroundTint="#000000"/>-->
+            <!--</LinearLayout>-->
+
+            <LinearLayout
+                android:id="@+id/llt_warm_prompt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tvw_wxts"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/main_warm_prompt" />
+
+                <!--<TextView-->
+                <!--android:id="@+id/tvw_warm_prompt"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:singleLine="true"-->
+                <!--android:focusable="true"-->
+                <!--android:marqueeRepeatLimit="marquee_forever"-->
+                <!--android:ellipsize="marquee"-->
+                <!--android:text="华为客户服务中心秉承“方便、快捷、贴心”的服务理念，让您真真正正体验到华为带来的有温度服务。" />-->
+                <TextView
+                    android:id="@+id/tvw_warm_prompt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="华为客户服务中心秉承“方便、快捷、贴心”的服务理念，让您真真正正体验到华为带来的有温度服务。" />
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_above="@+id/llt_warm_prompt"
+                android:layout_below="@+id/tvw_repair_schedule"
+                android:paddingBottom="@dimen/px18"
+                android:paddingTop="@dimen/px18">
+
+                <FrameLayout
+                    android:id="@+id/flt_measure"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="@dimen/px30"
+                    android:layout_toLeftOf="@+id/llt_can_receive">
+                </FrameLayout>
+
+                <FrameLayout
+                    android:id="@+id/flt_nodata"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="@dimen/px30"
+                    android:layout_toLeftOf="@+id/llt_can_receive"
+                    android:background="@drawable/round_graye6_10">
+
+                    <ImageView
+                        android:layout_width="@dimen/px356"
+                        android:layout_height="@dimen/px342"
+                        android:layout_gravity="center"
+                        android:src="@mipmap/default_main_nodata" />
+                </FrameLayout>
+
+                <GridView
+                    android:id="@+id/gvw_sr_detail"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="@dimen/px30"
+                    android:layout_toLeftOf="@+id/llt_can_receive"
+                    android:gravity="center"
+                    android:horizontalSpacing="@dimen/px30"
+                    android:numColumns="2"
+                    android:verticalSpacing="@dimen/px18"
+                    android:visibility="gone"></GridView>
+
+
+                <LinearLayout
+                    android:id="@+id/llt_can_receive"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentTop="true"
+                    android:background="@drawable/round_graye6_10"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/round_blue1_10"
+                        android:gravity="center"
+                        android:paddingBottom="@dimen/px5"
+                        android:paddingLeft="@dimen/px15"
+                        android:paddingRight="@dimen/px15"
+                        android:paddingTop="@dimen/px5"
+                        android:text="@string/main_can_receive" />
+
+                    <ListView
+                        android:id="@+id/llw_can_receive"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:divider="@null"></ListView>
+                </LinearLayout>
+            </RelativeLayout>
+        </RelativeLayout>
+    </LinearLayout>
+</FrameLayout>

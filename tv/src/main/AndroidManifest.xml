@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.jelly.tv">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+
+    <uses-feature
+        android:name="android.hardware.touchscreen"
+        android:required="false" />
+    <uses-feature
+        android:name="android.software.leanback"
+        android:required="true" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/app_icon_quantum"
+        android:label="@string/app_name"
+        android:supportsRtl="true">
+        <activity
+            android:name="com.jelly.tv.activity.GuideActivity"
+            android:banner="@drawable/app_icon_your_company"
+            android:icon="@drawable/app_icon_your_company"
+            android:label="@string/app_name"
+            android:launchMode="singleTask"
+            android:logo="@drawable/app_icon_your_company"
+            android:screenOrientation="landscape">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <!--是否显示再电视端-->
+                <category android:name="android.intent.category.LEANBACK_LAUNCHER" />
+                <!--是否显示在手机或平板端-->
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.jelly.test.activity.TestMainActivity"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name="com.jelly.tv.activity.WorkMainActivity"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name="com.jelly.tv.activity.TVMainActivity"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name="com.jelly.test.activity.DrawTextActivity"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name="com.jelly.test.activity.SpinnerActivity"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name="com.jelly.test.activity.GifActivity"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name="com.jelly.test.activity.MarqueeActivity"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name="com.jelly.test.activity.LableActivity"/>
+        <activity
+            android:name="com.jelly.test.example.GlideMainActivity"/>
+    </application>
+</manifest>

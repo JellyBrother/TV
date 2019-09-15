@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/round_graye6_10"
+    android:paddingBottom="@dimen/px30"
+    android:paddingLeft="@dimen/px15"
+    android:paddingRight="@dimen/px15"
+    android:paddingTop="@dimen/px15">
+
+    <TextView
+        android:id="@+id/tvw_queueing_no"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:singleLine="true"
+        android:textColor="#666666"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/tvw_tatstart_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:singleLine="true"
+        android:textColor="#666666" />
+
+    <RelativeLayout
+        android:layout_below="@+id/tvw_queueing_no"
+        android:layout_marginTop="@dimen/px10"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.jelly.tv.weight.RepairProgressImageView1
+            android:id="@+id/rpivw_sr_detail"
+            android:layout_width="@dimen/px350"
+            android:layout_height="@dimen/px350"
+            android:layout_centerInParent="true"
+            android:src="@mipmap/main_sr_detail_accpet" />
+
+        <ImageView
+            android:id="@+id/ivw_sr_detail"
+            android:layout_width="@dimen/px40"
+            android:layout_height="@dimen/px40"
+            android:layout_centerInParent="true"
+            android:background="@mipmap/main_sr_detail_green" />
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/ivw_sr_default"
+        android:layout_width="@dimen/px106"
+        android:layout_height="@dimen/px104"
+        android:layout_centerInParent="true"
+        android:background="@mipmap/default_main_sr_detail" />
+</RelativeLayout>

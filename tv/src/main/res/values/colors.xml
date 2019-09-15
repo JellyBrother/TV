@@ -1,0 +1,29 @@
+<resources>
+    <color name="background_gradient_start">#000000</color>
+    <color name="background_gradient_end">#DDDDDD</color>
+    <color name="fastlane_background">#0096a6</color>
+    <color name="search_opaque">#ffaa3f</color>
+    <color name="selected_background">#ffaa3f</color>
+    <color name="detail_background">#0096a6</color>
+    <color name="soft_opaque">#30000000</color>
+    <color name="img_soft_opaque">#30FF0000</color>
+    <color name="img_full_opaque">#00000000</color>
+    <color name="black_opaque">#AA000000</color>
+    <color name="white">#FFFFFF</color>
+    <color name="orange_transparent">#AAFADCA7</color>
+    <color name="orange">#FADCA7</color>
+    <color name="yellow">#EEFF41</color>
+    <color name="default_background">#3d3d3d</color>
+    <color name="white_e2">#e2e2e2</color>
+    <color name="tranc">#00000000</color>
+    <!-- gray 灰色-->
+    <color name="gray_e6e6e6">#e6e6e6</color>
+    <!-- 黑色 -->
+    <color name="black_333333">#333333</color>
+    <color name="black">#000000</color>
+    <!-- 蓝色 -->
+    <color name="blue_2d9dff">#2d9dff</color>
+    <color name="blue_0e71c7">#0e71c7</color>
+    <color name="blue_0d65b4">#0d65b4</color>
+    <color name="blue_1294f6">#1294f6</color>
+</resources>

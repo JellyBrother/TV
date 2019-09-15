@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<linearlayout xmlns:android="https://schemas.android.com/apk/res/android"
+    xmlns:custom="https://schemas.android.com/apk/res-auto"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    android:orientation="vertical">
+
+    <textview
+        android:background="#38353D"
+        android:gravity="center"
+        android:layout_height="48dp"
+        android:layout_width="match_parent"
+        android:text="标签"
+        android:textcolor="@android:color/white"
+        android:textsize="16dp"/>
+
+    <scrollview
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent">
+
+        <linearlayout
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:orientation="vertical">
+
+            <textview
+                android:background="@android:color/white"
+                android:gravity="center_vertical"
+                android:id="@+id/tv_remind"
+                android:layout_height="46dp"
+                android:layout_width="match_parent"
+                android:paddingleft="15dp"
+                android:text="我的标签(最多5个) "
+                android:textsize="16dp" />
+
+            <com.per.flowlayoutdome.flowlayout
+                android:background="@android:color/white"
+                android:id="@+id/tcy_my_label"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:padding="5dp"
+                android:visibility="gone"
+                custom:horizontalspacing="6dp"
+                custom:verticalspacing="12dp" />
+
+            <view
+                android:background="#f6f6f6"
+                android:layout_height="10dp"
+                android:layout_width="match_parent" />
+
+            <relativelayout
+                android:background="@android:color/white"
+                android:layout_height="46dp"
+                android:layout_width="match_parent">
+
+                <textview
+                    android:layout_centervertical="true"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:paddingleft="15dp"
+                    android:text="推荐标签 "
+                    android:textsize="16dp"/>
+            </relativelayout>
+
+            <view
+                android:background="#f6f6f6"
+                android:layout_height="1dp"
+                android:layout_width="match_parent" />
+
+            <com.per.flowlayoutdome.flowlayout
+                android:background="@android:color/white"
+                android:id="@+id/tcy_hot_label"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:padding="5dp"
+                custom:horizontalspacing="6dp"
+                custom:verticalspacing="12dp"/>
+        </linearlayout>
+    </scrollview>
+</linearlayout>

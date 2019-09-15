@@ -1,0 +1,67 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 26
+    buildToolsVersion "26.0.2"
+    defaultConfig {
+        applicationId "com.jelly.tv"
+        minSdkVersion 21
+        targetSdkVersion 26
+        versionCode 1
+        versionName "1.0"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    compile('com.android.support:support-v13:24.2.0')
+
+//    compile files('libs/animated-base-1.10.0.jar')
+//    compile files('libs/animated-webp-1.10.0.jar')
+//    compile files('libs/soloader-0.5.0.jar')
+
+//    compile 'com.android.support:appcompat-v7:26.0.2'
+//    compile ("com.github.bumptech.glide:glide:4.4.0"){
+//        exclude group: "com.android.support"
+//    }
+//    provided 'com.github.bumptech.glide:compiler:4.4.0'
+
+
+//    //用于webp的支持
+//    compile 'com.facebook.fresco:animated-webp:1.0.1'
+//    compile 'com.facebook.fresco:webpsupport:1.0.1'
+//    compile 'com.facebook.fresco:fresco:1.0.1'
+}
+
+//configurations {
+//    all*.exclude group: 'android', module: 'android'
+//    all*.exclude group: 'com.android.support', module: 'support-annotations'
+//}
+
+/**
+ * 备注：
+ * implementation相当于compile等同于api fileTree
+ * annotationProcessor相当于provided是APT工具中的一种相当于注解
+ *
+ * 错误：
+ * depends on one or more Android Libraries but is a jar解决方式加上   @aar
+ *    compile ("com.github.bumptech.glide:glide:4.4.0@aar") {transitive = true}* 或者加上排除
+ *     compile ("com.github.bumptech.glide:glide:4.4.0") {exclude group: "com.android.support"}compile "com.android.support:support-fragment:26.0.2"
+ *
+ * Failed to resolve:com.android.support:appcompat-v7:报错处理
+ * 原因是当前studio工具的buildToolsVersion太低，而v7包要求的工具高，
+ * 1、升级buildTools工具版本
+ * 2、降低v7的版本要求
+ *
+ * Error:Cause: com.android.build.gradle.tasks.factory.AndroidJavaCompile.setDependencyCacheDir(Ljava/io/File;)VConsult IDE log for more details (Help | Show Log)
+ * 原因是运行别人的项目时，gradle工具版本对应不上
+ * 找到gradle文件夹的gradle-wrapper.properties文件，修改distributionUrl路径为自己gradle工具的路径，对应的是studio安装目录下的gradle工具
+ *
+ * 库或者主工程不支持aar文件编译，解决：
+ *      repositories {flatDir {dirs 'libs'}}*/

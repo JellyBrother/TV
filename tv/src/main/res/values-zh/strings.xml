@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">我的电视</string>
+    <string name="jump_demo_main">跳转demo</string>
+    <string name="jump_mycode_test">跳转测试空间</string>
+    <string name="jump_mycode_work">跳转开发空间</string>
+    <string name="btn_china">中文</string>
+    <string name="btn_english">英文</string>
+    <!-- TV注页面 -->
+    <string name="main_repair_schedule">您的维修进度</string>
+    <string name="main_warm_prompt">温馨提示：</string>
+    <string name="main_can_receive">可取机用户</string>
+    <string name="main_repair_accept">受理</string>
+    <string name="main_repair_check">检测</string>
+    <string name="main_repair_service">维修</string>
+    <string name="main_repair_get">取机</string>
+</resources>
+
