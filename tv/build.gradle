@@ -22,6 +22,8 @@ dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
     compile('com.android.support:support-v13:24.2.0')
 
+
+
 //    compile files('libs/animated-base-1.10.0.jar')
 //    compile files('libs/animated-webp-1.10.0.jar')
 //    compile files('libs/soloader-0.5.0.jar')
@@ -64,4 +66,5 @@ dependencies {
  * 找到gradle文件夹的gradle-wrapper.properties文件，修改distributionUrl路径为自己gradle工具的路径，对应的是studio安装目录下的gradle工具
  *
  * 库或者主工程不支持aar文件编译，解决：
- *      repositories {flatDir {dirs 'libs'}}*/
+ *      repositories {flatDir {dirs 'libs'}}
+ */
