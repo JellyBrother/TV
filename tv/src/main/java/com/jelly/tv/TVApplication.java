@@ -31,12 +31,12 @@ public class TVApplication extends Application implements IApplication {
     public void onCreate() {
         super.onCreate();
         application = this;
-        setIcaptainEnv();//根据配置文件判断当前是什么服务环境
+        setEnv();//根据配置文件判断当前是什么服务环境
         initDB();//初始化DB
         copyH5File();//复制h5的zip文件，然后解压
     }
 
-    private void setIcaptainEnv() {
+    private void setEnv() {
 //        envModel = BuildConfig.EnvMode;//根据配置文件判断当前是什么服务环境
         LogTools.getInstance().init(this);
         if(TextUtils.equals("pro",envModel)){

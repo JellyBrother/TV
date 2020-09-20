@@ -31,7 +31,7 @@ import java.util.Map;
  * @author tWX333516 on 2016/7/23
  */
 public final class AppCrashHandler implements Thread.UncaughtExceptionHandler {
-    private static final String TAG = "iCaptainException";
+    private static final String TAG = "Exception";
     public String crashDir = "";
     //系统默认的UncaughtException处理类
     private Thread.UncaughtExceptionHandler mDefaultHandler;

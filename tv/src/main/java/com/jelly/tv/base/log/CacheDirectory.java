@@ -31,8 +31,6 @@ import java.io.File;
  *         /data/data/com..xx(包名)/cache/hw_exception  app异常闪退日志目录目录
  *         4.	若存在SDCard的情况
  *         若SDCrad存在的情况，项目中需要的本地文件保存目录为
- *         //IT/iCaptain/        应用APP业务存储目录
- *         /System/iCaptain/          应用APP日志目录
  */
 public final class CacheDirectory {
     private CacheDirectory() {
@@ -78,9 +76,9 @@ public final class CacheDirectory {
             Log.d(CacheDirectory.class.getSimpleName(), "加载sdcard文件：" + cacheName);
             String cacheDir = "";
             if (IT) {
-                cacheDir = "//IT/iCaptain/" + cacheName;
+                cacheDir = "//" + cacheName;
             } else {
-                cacheDir = "/System/iCaptain/" + cacheName;
+                cacheDir = "/System/" + cacheName;
             }
             File file = new File(Environment.getExternalStorageDirectory().getPath() + cacheDir);
             flag = true;
@@ -122,7 +120,7 @@ public final class CacheDirectory {
      * @return
      */
     public static String getDownLoadDir(Context context) {
-        return getCacheDir(context, "iCaptain_download", true);
+        return getCacheDir(context, "_download", true);
     }
 
     /**
@@ -131,7 +129,7 @@ public final class CacheDirectory {
      * @return
      */
     public static String getDownLoadH5Zip(Context context) {
-        return getH5CacheDir(context, ".iCaptain_download_H5");
+        return getH5CacheDir(context, "._download_H5");
     }
 
     /**
@@ -140,7 +138,7 @@ public final class CacheDirectory {
      * @return
      */
     public static String getLogDir(Context context) {
-        return getCacheDir(context, "iCaptain_log", false);
+        return getCacheDir(context, "_log", false);
     }
 
     /**
@@ -149,7 +147,7 @@ public final class CacheDirectory {
      * @return
      */
     public static String getApkDir(Context context) {
-        return getCacheDir(context, "iCaptain_apk", true);
+        return getCacheDir(context, "_apk", true);
     }
 
 
@@ -159,7 +157,7 @@ public final class CacheDirectory {
      * @return
      */
     public static String getPicDir(Context context) {
-        return getCacheDir(context, "iCaptain_pic", true);
+        return getCacheDir(context, "_pic", true);
     }
 
     /**
@@ -168,7 +166,7 @@ public final class CacheDirectory {
      * @return
      */
     public static String getVideoDir(Context context) {
-        return getCacheDir(context, "iCaptain_video", true);
+        return getCacheDir(context, "_video", true);
     }
 
     /**
@@ -177,7 +175,7 @@ public final class CacheDirectory {
      * @return
      */
     public static String getMusicDir(Context context) {
-        return getCacheDir(context, "iCaptain_music", true);
+        return getCacheDir(context, "_music", true);
     }
 
     /**
@@ -186,7 +184,7 @@ public final class CacheDirectory {
      * @return
      */
     public static String getTempDir(Context context) {
-        return getCacheDir(context, "iCaptain_temp", true);
+        return getCacheDir(context, "_temp", true);
     }
 
     /**
@@ -195,7 +193,7 @@ public final class CacheDirectory {
      * @return
      */
     public static String getWebViewDir(Context context) {
-        return getCacheDir(context, "iCaptain_web", true);
+        return getCacheDir(context, "_web", true);
     }
 
     /**
@@ -205,7 +203,7 @@ public final class CacheDirectory {
      * @return
      */
     public static String getUpdateDir(Context context) {
-        return getCacheDir(context, "iCaptain_update", true);
+        return getCacheDir(context, "_update", true);
     }
 
     /**
@@ -215,6 +213,6 @@ public final class CacheDirectory {
      * @return
      */
     public static String getExceptionDir(Context context) {
-        return getCacheDir(context, "iCaptain_exception", false);
+        return getCacheDir(context, "_exception", false);
     }
 }
