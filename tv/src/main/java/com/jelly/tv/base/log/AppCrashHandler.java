@@ -27,8 +27,6 @@ import java.util.Map;
 
 /**
  * UncaughtException处理类,当程序发生Uncaught异常的时候,有该类来接管程序,并记录发送错误报告.
- *
- * @author tWX333516 on 2016/7/23
  */
 public final class AppCrashHandler implements Thread.UncaughtExceptionHandler {
     private static final String TAG = "Exception";

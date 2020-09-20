@@ -19,8 +19,6 @@ import android.widget.ImageView;
 
 /**
  * 设置圆形图片
- * @author xWX294365
- *
  */
 public class RepairProgressImageView extends ImageView {
 

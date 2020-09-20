@@ -1,7 +1,6 @@
 package com.jelly.tv.bean;
 
 /**
- * Created by cWX423784 on 2016/11/21.
  * 获取维修进度
  */
 public class RepairInfo{

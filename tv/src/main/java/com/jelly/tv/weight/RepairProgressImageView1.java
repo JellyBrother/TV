@@ -13,8 +13,6 @@ import com.jelly.tv.R;
 
 /**
  * 设置圆形图片
- *
- * @author xWX294365
  */
 public class RepairProgressImageView1 extends ImageView {
     private Resources resources;

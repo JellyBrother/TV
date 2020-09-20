@@ -19,7 +19,6 @@ import java.util.List;
 
 /**
  * v1.1开发
- * Created by lwx334725 on 2017/07/04.
  */
 public class SrDetailAdapter extends BaseAdapter {
     private Context mContext;

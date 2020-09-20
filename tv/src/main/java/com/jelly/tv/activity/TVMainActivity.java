@@ -22,7 +22,6 @@ import java.util.ArrayList;
 
 /**
  * v1.1开发
- * Created by lwx334725 on 2017/07/04.
  */
 public class TVMainActivity extends BaseActivity {
     //左边图片展示

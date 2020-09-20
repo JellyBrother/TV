@@ -3,7 +3,6 @@ package com.jelly.tv.base.interfaces;
 import android.app.Activity;
 
 /**
- * Created by lwx334725 on 2016/10/18.
  * 对activity进行控制
  */
 public interface IApplication {

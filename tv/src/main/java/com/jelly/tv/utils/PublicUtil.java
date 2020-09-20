@@ -61,9 +61,6 @@ import java.util.UUID;
 
 /**
  * 公共工具类
- *
- * @author lWX196759
- *
  */
 public class PublicUtil {
 
@@ -563,7 +560,6 @@ public class PublicUtil {
 	 *            需要迭代的目录
 	 * @param filePathList
 	 *            List列表用于保存图片的绝对路径
-	 * @author wWX280320
 	 */
 	public static void iteratePictureDir(File dir, List<String> filePathList) {
 
